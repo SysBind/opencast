@@ -352,7 +352,7 @@
 
         <!-- 2-legged OAuth is used by trusted 3rd party applications, including LTI. -->
         <!-- Uncomment the line below to support LTI or other OAuth clients.          -->
-        <!-- <ref bean="oauthProtectedResourceFilter" /> -->
+        <ref bean="oauthProtectedResourceFilter" />
       </list>
     </property>
   </bean>
@@ -452,8 +452,8 @@
 
   <bean name="oAuthConsumerDetailsService" class="org.opencastproject.kernel.security.OAuthSingleConsumerDetailsService">
     <constructor-arg index="0" ref="userDetailsService" />
-    <constructor-arg index="1" value="CONSUMERKEY" />
-    <constructor-arg index="2" value="CONSUMERSECRET" />
+    <constructor-arg index="1" value="opencast" />
+    <constructor-arg index="2" value="53ee1d2496767631f00430640424a52b" />
     <constructor-arg index="3" value="constructorName" />
   </bean>
 
@@ -472,15 +472,15 @@
         <!-- Uncomment to trust usernames from the LTI consumer identified by CONSUMERKEY.           -->
         <!-- Users from untrusted systems will be prefixed with "lti:" and the consumer domain name. -->
 
-        <!--
+        
         <constructor-arg index="1" ref="securityService" />
         <constructor-arg index="2">
           <list>
-            <value>CONSUMERKEY</value>
+            <value>opencast</value>
           </list>
         </constructor-arg>
         <constructor-arg index="3" value="^(admin|opencast_system_account)$" />
-        -->
+       
 
       </bean>
     </property>
