@@ -318,7 +318,7 @@ define(['require', 'jquery', 'underscore', 'backbone', 'basil', 'bowser', 'engag
 
     for (var i = 0; i < tracks.length; i++) {
       var found = false;
-      for (var j = 0; j < tracks[i].tags.tag.length; j++) {
+      for (var j = 0; tracks[i].tags != "" && j < tracks[i].tags.tag.length; j++) {
         for (var k = 0; k < filterTagsArray.length; k++) {
           if (tracks[i].tags.tag[j] == filterTagsArray[k].trim()) {
             found = true;
