@@ -1,0 +1,64 @@
+body {
+    background: grey  url(../resources/utility_bkg.jpg) repeat top center ;
+    color: white;
+    /*overflow: hidden;*/
+}
+#container {
+   width:100%;
+}
+#screen {
+  width: 100%;
+}
+#screen img {
+    width: 100%;
+}
+
+
+#capabilities  {
+    list-style-type: none;
+}
+#capabilities .right {
+    font-style: italic;
+}
+
+
+.clear {
+    clear: both;
+}
+
+thead tr {
+    background: #ccc;
+    font-weight: bold;
+    color: #333;
+}
+td {
+    padding: 3px 15px;
+}
+
+tbody tr td {
+    background-color: white;    
+}
+.odd {
+    background: #fff;
+    color: #333;
+}
+
+#info {
+    background: #f3f3f3;
+    color: black;
+    padding: 15px;
+}
+
+#agentInfoTable {
+    margin-bottom: 20px;
+}
+
+.iconTable{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+#infoCapabilities{
+    margin-bottom: 20px;
+}

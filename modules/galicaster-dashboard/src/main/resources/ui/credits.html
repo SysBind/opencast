@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Credits - Galicaster Dashboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/credits.css" title="Panel stylesheet" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="css/styleTabs.css" title="Panel stylesheet" type="text/css" media="screen" charset="utf-8">  
+        
+        <script type='text/javascript' src='js/libs/jquery/jquery.js'></script>
+        <script type='text/javascript' src='js/libs/jqueryui/jquery-ui.js'></script>
+        
+</head>
+<body>
+    <div id="wrapperTopBar">
+        <div id="topBar">
+            <ul class="tabrow">
+                <a href="index.html"><li>Panel</li></a>
+                <a href="calendar.html"><li>Calendar</li></a>
+                <a href="credits.html"><li id="logoTab" class="selected"><img src="resources/dashboard_trans.png" /></li></a>
+            </ul>
+        </div>      
+
+    </div>
+    <div class="utilityView">
+        <div id="sections">
+            <input type="button" value="Credits" /><br/>
+            <input type="button" value="Help" /><br/>
+            <input type="button" value="Contributors" /><br/>
+            <input type="button" value="License" />
+        </div>
+    </div>
+        
+    <div class="dashboardMainContainer" style="left: 200px;">
+        <div class="dashboardMessageContainerLeft">última actualización: 24/4/2013 09:33:25</div>
+        <div class="showUtilsButton expanded">&lt;</div>
+        <div class="dashboardContainer">
+            <div id='credits'>
+                <h1>Galicaster <span style="color:red;">Dashboard</span></h1>
+                <p>
+                    Version: 1.0-RC1
+                    <br/>Copyright © 2013 Teltek
+                </p>
+                <p><a href="http://galicaster.org">Galicaster website</a></p>
+                <p><img src="resources/logo_teltek.png" style="width: 200px;" title="teltek"/></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready( function(){
+            //tabs
+            $(".tabrow li").click(function(e) {
+                $("li").removeClass("selected");
+                $(this).addClass("selected");
+            });
+            
+            // show/hide sidebar panel
+            $('.showUtilsButton').click(function(event) {
+                var widthUtilityView = $('.utilityView').css('width');
+                if ($(this).hasClass('collapsed')) {   // show panel
+                    $(this).removeClass('collapsed');
+                    $(this).addClass('expanded');
+                    $(this).html ('<');
+                   $('.dashboardMainContainer').animate({'left':widthUtilityView},{duration:200});
+                } else {
+                    $(this).removeClass('expanded');
+                    $(this).addClass('collapsed');
+                    $(this).html ('>');
+                    $('.dashboardMainContainer').animate({'left': 0},{duration:200});
+                }
+            });
+        });
+    </script>
+</body>
+</html>

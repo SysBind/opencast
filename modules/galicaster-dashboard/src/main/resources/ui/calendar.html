@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <title>Calendar - Galicaster Dashboard</title>
+    
+    <link rel='stylesheet' type='text/css' href='js/libs/fullcalendar/fullcalendar.css' />
+    <link rel='stylesheet' type='text/css' href='js/libs/fullcalendar/fullcalendar.print.css' media='print' />
+    <link rel="stylesheet" type='text/css' href='css/base/jquery-ui.css' />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" title="Panel stylesheet"  media="screen" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/styleTabs.css" title="Panel stylesheet"  media="screen" charset="utf-8">
+    
+    <script type='text/javascript' src='js/libs/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/libs/jqueryui/jquery-ui.js'></script>
+    
+    <script type='text/javascript' src='js/functions.js'></script>
+    <script type='text/javascript' src='js/libs/fullcalendar/fullcalendar.min.js'></script>
+    <script type='text/javascript' src='js/functionsCalendar.js'></script>
+</head>
+<body>
+    <div id="wrapperTopBar">
+        <div id="topBar">
+            <ul class="tabrow">
+                <a href="index.html"><li>Panel</li></a>
+                <a href="calendar.html"><li class="selected">Calendar</li></a>
+                <a href="credits.html"><li id="logoTab"><img src="resources/dashboard_trans.png" /></li></a>
+            </ul>
+        </div>      
+    </div>    
+    <div class="utilityView">
+        <div id="search_box">
+            <input id="search_input" name="q" type="text" size="40" placeholder="Search..." />
+        </div>
+
+        <div id="filter">
+            <div id="title_filter_agents">All agents<input type="checkbox" name="sel_agentes" value="all" /></div>
+            <ul id="list_filter_agents"></ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="dashboardMainContainer" style="left: 200px;">
+        <div class="dashboardMessageContainerLeft">última actualización: 24/4/2013 09:33:25</div>
+        <div class="showUtilsButton expanded">&lt;</div>
+        <div class="dashboardContainer">
+            <div id='calendar'></div>
+        </div>
+    </div>
+
+    <div class="alertWindows" id="messagePastDates" title="Event error">
+        <p>You can't book events in past dates</p>
+    </div>
+    
+    <div class="alertWindows" id="messageConflicts" title="Error - Events conflict">
+        <p>There are events that conflict with your scheduled time on your selected capture agent</p>
+    </div>
+
+    <script>
+        $(document).ready( function(){
+            //tabs
+            $(".tabrow li").click(function(e) {
+                $("li").removeClass("selected");
+                $(this).addClass("selected");
+            });
+            
+            
+            // show/hide sidebar panel
+            $('.showUtilsButton').click(function(event) {
+                var widthUtilityView = $('.utilityView').css('width');
+                if ($(this).hasClass('collapsed')) {   // show panel
+                    $(this).removeClass('collapsed');
+                    $(this).addClass('expanded');
+                    $(this).html ('<');
+                   $('.dashboardMainContainer').animate({'left':widthUtilityView},{duration:200});
+                } else {
+                    $(this).removeClass('expanded');
+                    $(this).addClass('collapsed');
+                    $(this).html ('>');
+                    $('.dashboardMainContainer').animate({'left': 0},{duration:200});
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+

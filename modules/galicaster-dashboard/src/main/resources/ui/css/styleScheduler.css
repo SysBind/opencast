@@ -1,0 +1,147 @@
+body { 
+   font-family: Arial, "Times New Roman",Georgia,Serif;
+   font-size: 12px;
+   background: #eee url('../resources/macGrey.png') repeat;
+   margin: 20px auto; 
+}
+.clear { clear: both; }
+.rounded {
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+#wrapper { margin: 0 auto; width: 480px; background: white; padding: 3px 20px 20px 20px;}
+   #wrapper h2 { width: 440px; margin: 20px auto; text-align: center; color: #555; padding: 5px 10px; font-size: 1.2em; background: #eee url('../img/slidedowntrans-12.png') no-repeat center right /*12px*/;}
+   .sectionClose { background-image: url('../img/slideuptrans-12.png') !important; }
+   #showAdditionalInfo { width: 440px; height: 16px; background: #fff url('../img/slidedown-12.png') no-repeat center center; margin: 0 auto; border-top:3px solid #eee;}
+   #additionalInfo { display: none; margin: 0 auto; }
+   
+   .additionalInfoOpened {
+      margin-top: 15px !important;
+      background-image: url('../img/slideup-12.png') !important;
+   }
+select { padding: 5px; }
+ul { padding-left: 20px;}
+ul li { list-style-type: none; margin-top: 3px; }
+ul li span { width: 128px; display: inline-block; }
+ul li span.value_tag { border: none; padding: 5px; }
+ul li input[type=text], ul li select { border: 1px solid #ccc; padding: 5px; }
+#basicInfo li input[type=text].value_tag, #additionalInfo li input[type=text].value_tag, ul li select { width: 300px;  }
+
+#startDateInput   { width: 150px; }
+#startTimeInput   { width: 130px; margin-left: 8px;}
+#durationInput    { width: 150px; } 
+#repeatCheck { width: 132px; margin-left:5px; background-color: #eee; padding: 5px;}
+#repeatCheckInput { }
+#repeatCheck span { width: 80px; margin-left: 15px;}
+#repeatPanel {
+    display: none;
+    width: 440px;
+    border: 1px solid #eee;
+    margin: 15px 0;
+    padding: 15px 0;
+}
+    #repeatPanel input { width: 100px;}
+        #repeatPanel input[type=radio] { width: 15px;}
+    #repeatPanel select { width: 130px;}
+    #repeatPanel span { width: 100px; }
+    
+    
+#repeatDays { display: none; }    
+#repeatDays span { width: 35px; }
+#repeatDays .title { width: 100px; display: block; float: left;}
+#repeatDays input[type=checkbox] { width: 10px;}    
+#repeatDays label { width: 20px;}   
+
+.weekDays { text-align: center; }
+.weekDays:hover { outline: 1px solid #eee; }
+.weekDays.active { background-color: #eee; }
+
+#repeatEnding input[type=text] { width: 20px;}
+#num_repetitions { width: 30px !important; }
+
+
+
+#conflicts ul li {
+   margin-bottom: 5px;
+   /*list-style-type: circle !important;*/
+}
+#conflictsWarningImg {margin-right: 5px;}
+.conflict_title { font-weight: bold; width: 120px; }
+.conflict_info { width: 200px; }
+
+#conflicts {
+   display: none;
+   width: 440px;
+   margin: 0 auto;
+   background-color: rgb(255, 233, 224);
+   padding: 10px;
+}
+#conflicts a:visited {
+   color: firebrick;
+}
+
+
+#comboAgents, #comboProcessing      { width: 312px; }  
+button.ui-datepicker-current { display: none; }
+
+#spanDevices { float:left; margin-top: 10px; }
+#listDevices { margin-left: 130px; }
+   #listDevices ul { width: 230px; padding: 5px 0px; }
+
+#processingPanel fieldset {
+   border: 1px solid #eee;
+   width: 88%;
+   margin: 10px auto;
+}
+
+#processingDescription {
+   width: 88%;
+   margin: 20px 0 20px 40px;
+}
+
+#divProcessing { display: block; }
+
+/* FIELDSET QUE VIENE EN HTML */
+
+#processingPanel fieldset ul li span {
+   width: 88%;
+}
+#processingPanel fieldset ul li label span {
+   width: auto;
+}
+#processingPanel #dvdFormat {
+   margin-left: 47px;
+   width: 282px;
+}
+
+#processingPanel #license {
+width: 280px !important;
+margin-left: 49px !important;
+}
+
+/* FIN DE FIELDSET QUE VIENE EN HTML */
+
+#menu_buttons { width: 440px; text-align: center; margin: 40px auto 0; padding-top: 10px; border-top: 1px dashed #eee;}
+
+#menu_buttons input { margin: 10px 20px; background: #eee; padding: 5px 30px;}
+
+#readOnly {
+    background-color: darkgreen;
+    color: white;
+    margin: 20px auto;
+    padding: 5px 10px;
+    text-align: center;
+    width: 440px;    
+}
+
+
+#btn_delete {
+    width: 60px;
+    margin-right: 40px !important;
+    padding: 5px 10px !important;
+    background-color: white !important;
+}
+
+.alertWindows { display: none; }
